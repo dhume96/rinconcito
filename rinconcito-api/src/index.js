@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import 'dotenv/config.js';
 import cors from 'cors';
 import morgan from 'morgan';
 import http from 'http';
@@ -11,10 +11,8 @@ import {
 } from 'apollo-server';
 import mongoose from 'mongoose';
 
-import schema from './schema';
-import resolvers from './resolvers';
-import models from './models';
-import loaders from './loaders';
+import schema from './schema/index.js';
+import resolvers from './resolvers/index.js';
 
 const app = express();
 const MONGODB =

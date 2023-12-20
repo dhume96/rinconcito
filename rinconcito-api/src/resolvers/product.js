@@ -1,9 +1,6 @@
 import { combineResolvers } from 'graphql-resolvers';
 
-import pubsub, { EVENTS } from '../subscription';
-import { isAuthenticated, isMessageOwner } from './authorization';
-
-import Product from '../models/product';
+import Product from '../models/product.js';
 
 const toCursorHash = string => Buffer.from(string).toString('base64');
 

@@ -1,7 +1,7 @@
 import { gql } from 'apollo-server-express';
 
-import userSchema from './user';
-import productSchema from './product';
+import userSchema from './user.js';
+import productSchema from './product.js';
 
 const linkSchema = gql`
   scalar Date
