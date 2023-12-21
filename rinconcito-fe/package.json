@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build--configuration production",
+    "build": "rm -rf dist/ && find . -type f -name deploy-\\* -exec rm {} \\; && ng build --configuration production && zip -r \"./deploy-$(date +%s%3).zip\" dist && rm -rf dist/",
+    "build-no-zip": "ng build--configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:rinconcito-fe": "node dist/rinconcito-fe/server/server.mjs"

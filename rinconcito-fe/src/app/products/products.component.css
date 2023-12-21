@@ -1,7 +1,4 @@
 .table {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
 }
 
 h3 {
@@ -23,6 +20,5 @@ h3 {
 }
 
 .btn-add-update {
-  margin-left: 300px;
   margin-top: 20px;
 }

@@ -4,22 +4,25 @@
         <p>Error: {{ error }}</p>
     </div>
 
-    <table class="table table-striped table-hover table-dark">
-        <thead>
-            <tr>
-                <th scope="col">Disponibles</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Precio Uni</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of products" (click)="editProduct(product.id)">
-                <td>{{product.quantity}}</td>
-                <td>{{product.name}}</td>
-                <td>{{product.unitPrice}}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <button type="submit" class="btn btn-info btn-add-update" (click)="goCreateProduct()">Crear Producto</button>
+    <div class="container">
+        <table class="table table-striped table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Disponibles</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio Uni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products" (click)="editProduct(product.id)">
+                    <td>{{product.quantity}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.unitPrice}}</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <button type="submit" class="btn btn-success btn-add-update" (click)="goCreateProduct()">Crear Producto</button>
+    </div>
+      
 </div>
