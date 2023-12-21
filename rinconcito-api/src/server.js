@@ -30,16 +30,12 @@ try {
         extended: true
     }));
 
-    app.use('/', express.static('../rinconcito-fe/dist/rinconcito-fe/browser/'));
+    //app.use('/', express.static('../rinconcito-fe/dist/rinconcito-fe/browser/'));
 
     await apolloServer.start();
     app.use(
         '/',
-        (req, res, next) => {
-            res.header("Access-Control-Allow-Origin", "*");
-            res.header("Access-Control-Allow-Headers", "X-Requested-With");
-            next();
-        },
+        cors({ origin: ['http://localhost:8000', 'http://192.168.0.22:8000'] }),
         express.json(),
         expressMiddleware(apolloServer)
     );
