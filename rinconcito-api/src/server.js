@@ -30,11 +30,11 @@ try {
         extended: true
     }));
 
-    app.use('/products', express.static('../rinconcito-fe/dist/rinconcito-fe/browser/'));
+    app.use('/', express.static('../rinconcito-fe/dist/rinconcito-fe/browser/'));
 
     await apolloServer.start();
     app.use(
-        '/',
+        '/graphql',
         cors(),
         express.json(),
         expressMiddleware(apolloServer)
