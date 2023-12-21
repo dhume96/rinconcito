@@ -30,10 +30,12 @@ try {
         extended: true
     }));
 
+    app.use('/products', express.static('../rinconcito-fe/dist/rinconcito-fe/browser/'));
+
     await apolloServer.start();
     app.use(
         '/',
-        cors({ origin: ['http://localhost:8000', 'http://192.168.0.22:8000'] }),
+        cors(),
         express.json(),
         expressMiddleware(apolloServer)
     );
