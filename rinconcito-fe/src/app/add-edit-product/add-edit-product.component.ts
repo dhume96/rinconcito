@@ -75,8 +75,8 @@ export class AddEditProductComponent implements OnInit {
         query: GET_PRODUCTS
       }]
     }).subscribe(({ data }: any) => {
-      //this.router.navigate(['/products']);
-      //this.productForm.reset();
+      this.router.navigate(['/products']);
+      this.productForm.reset();
     }, (error) => {
       this.error = error;
     }

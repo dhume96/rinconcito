@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "rm -rf dist/ && find . -type f -name deploy-\\* -exec rm {} \\; && ng build --configuration production && zip -r \"./deploy-$(date +%s%3).zip\" dist && rm -rf dist/",
+    "deploy": "rm -rf dist/ && find . -type f -name deploy-\\* -exec unzip {} \\;",
     "build-no-zip": "ng build--configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
