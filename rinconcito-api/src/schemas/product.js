@@ -39,7 +39,7 @@ export default `#graphql
   }
 
   type Mutation {
-    createProductAdmin(name: String!, store: Strin, dateAdded: String!, quantity: Int!, unitPrice: Float!, pic: String!): Product!
+    createProductAdmin(name: String!, store: String, dateAdded: String!, quantity: Int!, unitPrice: Float!, pic: String!): Product!
     updateProduct(id: ID!, name: String, store: String, quantity: Int, unitPrice: Float, pic: String): Product!
   }
 
