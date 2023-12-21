@@ -1,3 +1,5 @@
+import { combineResolvers } from 'graphql-resolvers';
+
 import Product from '../models/product.js';
 
 const toCursorHash = string => Buffer.from(string).toString('base64');
