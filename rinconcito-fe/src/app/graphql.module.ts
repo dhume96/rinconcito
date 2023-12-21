@@ -7,7 +7,7 @@ const uriLocal = 'http://localhost:9000';
 const uriProd = 'http://192.168.0.22:9000';
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   return {
-    link: httpLink.create({ uri: uriLocal }),
+    link: httpLink.create({ uri: uriProd }),
     cache: new InMemoryCache(),
   };
 }
