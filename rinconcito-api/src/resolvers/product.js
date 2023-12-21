@@ -79,8 +79,6 @@ export default {
     },
 
     updateProduct: async (parent, { id, name, store, quantity, unitPrice, pic }, { }) => {
-      console.log(id);
-      console.log(quantity);
       const newProduct = await Product.findOneAndUpdate({
         _id: id
       },
