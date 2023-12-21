@@ -35,7 +35,11 @@ try {
     await apolloServer.start();
     app.use(
         '/',
-        cors({ origin: ['http://localhost:9000/graphql'] }),
+        (req, res, next) => {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "X-Requested-With");
+            next();
+        },
         express.json(),
         expressMiddleware(apolloServer)
     );
