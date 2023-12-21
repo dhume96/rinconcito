@@ -33,7 +33,7 @@ try {
     await apolloServer.start();
     app.use(
         '/',
-        cors({ origin: ['http://localhost', 'http://192.168.0.22'] }),
+        cors({ origin: ['http://localhost:8000', 'http://192.168.0.22:8000'] }),
         express.json(),
         expressMiddleware(apolloServer)
     );
